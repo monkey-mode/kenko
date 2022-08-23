@@ -1,11 +1,12 @@
 import { Image } from "@nextui-org/react";
 import type { NextPage } from "next";
 import Footer from "../components/Footer";
+import Header from "../components/Header";
 import LandingPage from "../components/LandingPage";
 
 const Home: NextPage = () => {
   return (
-    <>
+    <div>
       <LandingPage />
       <Image
         // loader={myLoader}
@@ -23,7 +24,7 @@ const Home: NextPage = () => {
         alt="Picture of the author"
       />
       <Footer />
-    </>
+    </div>
   );
 };
 
