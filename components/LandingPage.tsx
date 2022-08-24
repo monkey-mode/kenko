@@ -1,5 +1,5 @@
-/* eslint-disable react/no-unescaped-entities */
-import { Container, Grid, Image, Text } from "@nextui-org/react";
+import { Checkbox, Container, Grid, Image, Row, Text } from "@nextui-org/react";
+import { servicesList } from "../consts";
 
 function LandingPage() {
   return (
@@ -8,8 +8,9 @@ function LandingPage() {
       direction="column"
       justify="center"
       alignContent="center"
+      alignItems="center"
       css={{
-        height: "100vh",
+        height: "fit-content",
         background: "#042F14",
         display: "flex",
         padding: 0,
@@ -17,32 +18,58 @@ function LandingPage() {
     >
       <Grid.Container
         justify="center"
-        alignContent="center"
+        alignContent="stretch"
         css={{ h: "100%" }}
       >
         <Grid
-          xs={12}
+          xs={0}
           md={6}
           justify="center"
           alignContent="stretch"
           alignItems="center"
         >
-          <Container md>
+          <Container xs justify="flex-end">
             <Text
               h1
               weight="bold"
-              css={{ textGradient: "to right, #BF953F,  #FCF6BA,  #AA771C" }}
+              css={{
+                textGradient: "to right, #BF953F,  #FCF6BA,  #AA771C",
+                fontFamily: "$primary",
+              }}
             >
               The essence of healt & vitality in one place
             </Text>
+            {serviceList(servicesList)}
           </Container>
         </Grid>
         <Grid
           xs={12}
+          md={0}
+          justify="center"
+          alignContent="stretch"
+          alignItems="center"
+        >
+          <Container xs justify="flex-end">
+            <Text
+              h1
+              weight="bold"
+              css={{
+                mt: "100px",
+                textGradient: "to right, #BF953F,  #FCF6BA,  #AA771C",
+                fontFamily: "$primary",
+              }}
+            >
+              The essence of healt & vitality in one place
+            </Text>
+            {serviceList(servicesList)}
+          </Container>
+        </Grid>
+        <Grid
+          xs={0}
           md={6}
           justify="center"
           css={{
-            h: "100%",
+            h: "100vh",
             display: "flex",
             flexDirection: "column",
             justifyContent: "flex-end",
@@ -56,9 +83,68 @@ function LandingPage() {
             alt="langing"
           />
         </Grid>
+        <Grid
+          xs={12}
+          md={0}
+          justify="center"
+          css={{
+            h: "100%",
+          }}
+        >
+          <Image
+            objectFit={"contain"}
+            width={"60%"}
+            showSkeleton
+            maxDelay={200}
+            src="/landing2.png"
+            alt="langing"
+          />
+        </Grid>
       </Grid.Container>
+      <div
+        style={{
+          opacity: "10%",
+          width: "80%",
+          borderTop: "2px solid #ffffff",
+          borderRadius: "1px",
+        }}
+      ></div>
     </Container>
   );
 }
 
 export default LandingPage;
+
+function serviceList(services: string[]) {
+  return (
+    <>
+      {services.map((service) => {
+        return (
+          <Row align="center" key={service}>
+            <Text
+              weight="extrabold"
+              css={{
+                mr: "$5",
+                lineHeight: "normal",
+                textGradient: "to right, #BF953F,  #FCF6BA,  #AA771C",
+                height: "fit-content",
+              }}
+            >
+              <span className="material-symbols-rounded">check_circle</span>
+            </Text>
+            <Text
+              h6
+              weight="thin"
+              transform="uppercase"
+              css={{
+                fontFamily: "$secondary",
+              }}
+            >
+              {service}
+            </Text>
+          </Row>
+        );
+      })}
+    </>
+  );
+}

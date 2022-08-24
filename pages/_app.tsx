@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         gold2: "#E0AA3E",
         gold3: "#E0AA3E",
         gold4: "#B88A44",
-        gradient: "linear-gradient(to right, #BF953F,  #FCF6BA,  #AA771C)",
+        gradient: "to right, #BF953F,  #FCF6BA,  #AA771C",
         gradient2:
           "linear-gradient(to right, #BF953F, #FCF6BA, #FCF6BA, #FBF5B7, #AA771C)",
 
