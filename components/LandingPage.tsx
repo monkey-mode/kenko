@@ -11,7 +11,6 @@ function LandingPage() {
       alignItems="center"
       css={{
         height: "fit-content",
-        background: "#042F14",
         display: "flex",
         padding: 0,
       }}
@@ -28,7 +27,7 @@ function LandingPage() {
           alignContent="stretch"
           alignItems="center"
         >
-          <Container xs justify="flex-end">
+          <Container xs justify="flex-end" css={{ zIndex: 100 }}>
             <Text
               h1
               weight="bold"
@@ -122,6 +121,7 @@ function serviceList(services: string[]) {
         return (
           <Row align="center" key={service}>
             <Text
+              className="material-symbols-rounded"
               weight="extrabold"
               css={{
                 mr: "$5",
@@ -130,7 +130,7 @@ function serviceList(services: string[]) {
                 height: "fit-content",
               }}
             >
-              <span className="material-symbols-rounded">check_circle</span>
+              check_circle
             </Text>
             <Text
               h6

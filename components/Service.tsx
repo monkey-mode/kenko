@@ -26,6 +26,7 @@ function Service() {
       <Grid.Container md justify="center" gap={4}>
         <Grid xs={12} md={3} alignItems="center" direction="column">
           <Avatar
+            zoomed
             src="/services/FacialTreatments.jpg"
             css={{ size: isMd ? "$32" : "$72" }}
           />
@@ -35,6 +36,7 @@ function Service() {
         </Grid>
         <Grid xs={12} md={3} alignItems="center" direction="column">
           <Avatar
+            zoomed
             src="/services/BodyScrub.jpg"
             css={{ size: isMd ? "$32" : "$72" }}
           />
@@ -44,6 +46,7 @@ function Service() {
         </Grid>
         <Grid xs={12} md={3} alignItems="center" direction="column">
           <Avatar
+            zoomed
             src="/services/Wax.jpg"
             css={{ size: isMd ? "$32" : "$72" }}
           />
@@ -53,6 +56,7 @@ function Service() {
         </Grid>
         <Grid xs={12} md={3} alignItems="center" direction="column">
           <Avatar
+            zoomed
             src="/services/Massage.jpg"
             css={{ size: isMd ? "$32" : "$72" }}
           />

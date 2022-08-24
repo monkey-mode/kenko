@@ -43,7 +43,7 @@ function Headers() {
                   css={{
                     textGradient: "$gradient",
                   }}
-                  weight={"normal"}
+                  weight={"bold"}
                 >
                   HOME
                 </Text>
@@ -56,7 +56,7 @@ function Headers() {
                   css={{
                     textGradient: "$gradient",
                   }}
-                  weight={"normal"}
+                  weight={"bold"}
                 >
                   ABOUT US
                 </Text>
@@ -69,7 +69,7 @@ function Headers() {
                   css={{
                     textGradient: "$gradient",
                   }}
-                  weight={"normal"}
+                  weight={"bold"}
                 >
                   PRODUCT
                 </Text>
@@ -82,7 +82,7 @@ function Headers() {
                   css={{
                     textGradient: "$gradient",
                   }}
-                  weight={"normal"}
+                  weight={"bold"}
                 >
                   CONTRACT
                 </Text>
@@ -90,7 +90,16 @@ function Headers() {
             </Link>
           </Row>
           <Button light auto>
-            <span className="material-symbols-rounded">list</span>
+            <Text
+              className="material-symbols-rounded"
+              h6
+              css={{
+                textGradient: "$gradient",
+              }}
+              weight={"bold"}
+            >
+              list
+            </Text>
           </Button>
         </Row>
       </Container>

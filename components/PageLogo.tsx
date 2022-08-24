@@ -20,6 +20,7 @@ function PageLogo() {
               h4
               weight={"normal"}
               css={{
+                textGradient: "$gradient",
                 fontFamily: "$primary",
                 letterSpacing: "0.5rem",
               }}
@@ -30,6 +31,7 @@ function PageLogo() {
               weight={"light"}
               size={"0.8rem"}
               css={{
+                textGradient: "$gradient",
                 fontFamily: "$secondary",
                 letterSpacing: "0.2rem",
               }}
