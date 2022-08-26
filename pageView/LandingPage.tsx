@@ -1,5 +1,6 @@
 import { Checkbox, Container, Grid, Image, Row, Text } from "@nextui-org/react";
 import { servicesList } from "../consts";
+import { ServiceType } from "../types";
 
 function LandingPage() {
   return (
@@ -114,12 +115,12 @@ function LandingPage() {
 
 export default LandingPage;
 
-function serviceList(services: string[]) {
+function serviceList(services: ServiceType[]) {
   return (
     <>
       {services.map((service) => {
         return (
-          <Row align="center" key={service}>
+          <Row align="center" key={service.name}>
             <Text
               className="material-symbols-rounded"
               weight="extrabold"
@@ -140,7 +141,7 @@ function serviceList(services: string[]) {
                 fontFamily: "$secondary",
               }}
             >
-              {service}
+              {service.name}
             </Text>
           </Row>
         );

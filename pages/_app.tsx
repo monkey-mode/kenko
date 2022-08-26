@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%)`,
       },
       fonts: {
-        sans: `'Nunito', sans-serif;`,
+        sans: `'Nunito','Noto Sans Thai', sans-serif;`,
         primary: `'Baskervville', serif;`,
         secondary: `'Nunito', sans-serif;`,
       },
@@ -31,16 +31,16 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <NextUIProvider theme={theme}>
-      <Container
-        fluid
-        css={{
+      <div
+        style={{
+          width: "100%",
+          height: "auto",
           background: "#042F14",
-          padding: 0,
         }}
       >
         <Header />
         <Component {...pageProps} />
-      </Container>
+      </div>
     </NextUIProvider>
   );
 }
