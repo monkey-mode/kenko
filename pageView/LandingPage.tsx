@@ -1,8 +1,13 @@
 import { Checkbox, Container, Grid, Image, Row, Text } from "@nextui-org/react";
 import { servicesList } from "../consts";
 import { ServiceType } from "../types";
+import { Swiper, SwiperSlide } from "swiper/react";
+// import required modules
+import { Pagination, Navigation } from "swiper";
+import { useMediaQuery } from "../hooks/useMediaQuery";
 
 function LandingPage() {
+  const isXs = useMediaQuery(650);
   return (
     <Container
       fluid
@@ -21,13 +26,7 @@ function LandingPage() {
         alignContent="stretch"
         css={{ h: "100%" }}
       >
-        <Grid
-          xs={0}
-          md={6}
-          justify="center"
-          alignContent="stretch"
-          alignItems="center"
-        >
+        <Grid justify="center" alignContent="stretch" alignItems="center">
           <Container xs justify="flex-end" css={{ zIndex: 100 }}>
             <Text
               h1
@@ -37,31 +36,44 @@ function LandingPage() {
                 fontFamily: "$primary",
               }}
             >
-              The essence of healt & vitality in one place
+              Our Promotion
             </Text>
-            {serviceList(servicesList)}
-          </Container>
-        </Grid>
-        <Grid
-          xs={12}
-          md={0}
-          justify="center"
-          alignContent="stretch"
-          alignItems="center"
-        >
-          <Container xs justify="flex-end">
             <Text
-              h1
-              weight="bold"
+              weight="normal"
               css={{
-                mt: "100px",
-                textGradient: "to right, #BF953F,  #FCF6BA,  #AA771C",
-                fontFamily: "$primary",
+                fontFamily: "$secondary",
               }}
             >
-              The essence of healt & vitality in one place
+              {`Happiness is the goal for everyone. To have a wonderful life, it
+              comes from healthy body combining with healthy mind. Preme Spa
+              aims to this concept and truly believe that body and mind are one
+              and they are the key foundations for wellness - and that's what
+              our treatments are all about. We hope our variety of special
+              treatments and services by qualified therapists bring you the most
+              pleasant relaxing experience, and happiness - because your
+              contentment is our inspiration`}
             </Text>
-            {serviceList(servicesList)}
+            <Swiper
+              pagination={{
+                type: "fraction",
+              }}
+              navigation={true}
+              modules={[Pagination, Navigation]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <div
+                  style={{
+                    background: "white",
+                    height: "100%",
+                    width: "100%",
+                    color: "black",
+                  }}
+                >
+                  Promo 1
+                </div>
+              </SwiperSlide>
+            </Swiper>
           </Container>
         </Grid>
         <Grid
@@ -101,14 +113,6 @@ function LandingPage() {
           />
         </Grid>
       </Grid.Container>
-      <div
-        style={{
-          opacity: "10%",
-          width: "80%",
-          borderTop: "2px solid #ffffff",
-          borderRadius: "1px",
-        }}
-      ></div>
     </Container>
   );
 }

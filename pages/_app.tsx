@@ -3,18 +3,23 @@ import type { AppProps } from "next/app";
 import { useState } from "react";
 import Header from "../components/Header";
 import "../styles/globals.css";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const theme = createTheme({
     type: "dark",
     theme: {
       colors: {
+        primary: "#464E2E",
+        secondary: "#362706",
         gold: "#FFD700",
         gold1: "#F9F295",
         gold2: "#E0AA3E",
         gold3: "#E0AA3E",
         gold4: "#B88A44",
-        gradient: "to right, #BF953F,  #FCF6BA,  #AA771C",
+        gradient: "linear-gradient(to right, #BF953F,  #FCF6BA,  #AA771C)",
         gradient2:
           "linear-gradient(to right, #BF953F, #FCF6BA, #FCF6BA, #FBF5B7, #AA771C)",
 
@@ -35,7 +40,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         style={{
           width: "100%",
           height: "auto",
-          background: "#042F14",
+          background: "#464E2E",
         }}
       >
         <Header />

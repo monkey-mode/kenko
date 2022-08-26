@@ -4,9 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 import { ServiceCard } from "../components/ServiceCard";
 
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
 import { servicesList } from "../consts";
 
 function Service() {
@@ -19,52 +16,12 @@ function Service() {
       alignContent="center"
       alignItems="center"
       css={{
-        background: "#042F14",
+        background: "#3A2503",
         display: "flex",
         p: "$0",
       }}
     >
       <Grid.Container md justify="center" gap={4}>
-        {/* <Grid xs={12} md={3} alignItems="center" direction="column">
-          <Avatar
-            zoomed
-            src="/services/FacialTreatments.jpg"
-            css={{ size: isMd ? "$32" : "$72" }}
-          />
-          <Text h5 transform="uppercase" weight={"normal"}>
-            Facail Treatment
-          </Text>
-        </Grid>
-        <Grid xs={12} md={3} alignItems="center" direction="column">
-          <Avatar
-            zoomed
-            src="/services/BodyScrub.jpg"
-            css={{ size: isMd ? "$32" : "$72" }}
-          />
-          <Text h5 transform="uppercase" weight={"normal"}>
-            Body Scrub
-          </Text>
-        </Grid>
-        <Grid xs={12} md={3} alignItems="center" direction="column">
-          <Avatar
-            zoomed
-            src="/services/Wax.jpg"
-            css={{ size: isMd ? "$32" : "$72" }}
-          />
-          <Text h5 transform="uppercase" weight={"normal"}>
-            PHILOSHOPHY
-          </Text>
-        </Grid>
-        <Grid xs={12} md={3} alignItems="center" direction="column">
-          <Avatar
-            zoomed
-            src="/services/Massage.jpg"
-            css={{ size: isMd ? "$32" : "$72" }}
-          />
-          <Text h5 transform="uppercase" weight={"normal"}>
-            Massage
-          </Text>
-        </Grid> */}
         <Grid xs={12}>
           <Swiper
             effect={"coverflow"}

@@ -22,6 +22,7 @@ function MassagePage() {
       alignContent="center"
       alignItems="center"
       css={{
+        width: "100%",
         height: "fit-content",
         display: "flex",
         padding: 0,
@@ -30,7 +31,12 @@ function MassagePage() {
       <Text h1 transform="uppercase" css={{ letterSpacing: "0.2rem" }}>
         massage menu
       </Text>
-      <Grid.Container justify="center" alignContent="stretch" gap={2}>
+      <Grid.Container
+        justify="center"
+        alignContent="stretch"
+        gap={1}
+        css={{ p: "$0" }}
+      >
         {servicesList[2].subService.map((service, index) => {
           return (
             <Grid
@@ -38,10 +44,10 @@ function MassagePage() {
               justify="center"
               alignItems="center"
               xs={12}
-              sm={6}
-              md={4}
+              sm={4}
+              md={3}
             >
-              <Card css={{ w: "500px", h: "600px" }}>
+              <Card css={{ w: "400px", h: "500px" }}>
                 <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                   <Col>
                     <Text
@@ -59,7 +65,7 @@ function MassagePage() {
                 </Card.Header>
                 <Card.Body css={{ p: 0 }}>
                   <Card.Image
-                    src="/massage-menu/balm-massage.jpg"
+                    src={service.img}
                     objectFit="cover"
                     width="100%"
                     height="100%"
@@ -67,13 +73,8 @@ function MassagePage() {
                   />
                 </Card.Body>
                 <Card.Footer
-                  isBlurred
                   css={{
-                    position: "absolute",
-                    bgBlur: "#0f111466",
-                    borderTop: "$borderWeights$light solid $gray800",
-                    bottom: 0,
-                    zIndex: 1,
+                    background: "$colors$secondary",
                   }}
                 >
                   <Row>
@@ -92,14 +93,23 @@ function MassagePage() {
                             </Table.Column>
                           )}
                         </Table.Header>
-                        <Table.Body items={rows}>
-                          {(item) => (
-                            <Table.Row key={item.key}>
-                              {(columnKey) => (
-                                <Table.Cell>{item[columnKey]}</Table.Cell>
-                              )}
-                            </Table.Row>
-                          )}
+                        <Table.Body>
+                          {service.price.map((row, index) => {
+                            return (
+                              <Table.Row key={index}>
+                                <Table.Cell
+                                  css={{
+                                    color: "$colors$gradient",
+                                    stroke: "$black",
+                                    strokeWidth: "2px",
+                                  }}
+                                >
+                                  {row.period}
+                                </Table.Cell>
+                                <Table.Cell>{row.price}</Table.Cell>
+                              </Table.Row>
+                            );
+                          })}
                         </Table.Body>
                       </Table>
                     </Col>
