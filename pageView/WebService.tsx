@@ -157,16 +157,7 @@ function WebService() {
                         </Text>
                       </Row>
                     }
-                    subtitle={
-                      <Text
-                        h5
-                        weight={"normal"}
-                        transform="uppercase"
-                        css={{ letterSpacing: "0.2rem" }}
-                      >
-                        {service.th}
-                      </Text>
-                    }
+                    subtitle={service.th}
                   >
                     <Card css={{ w: "100%", h: "300px" }}>
                       <Card.Body css={{ p: 0 }}>
@@ -184,7 +175,7 @@ function WebService() {
               })}
             </Collapse.Group>
           </Grid>
-          {/* <Grid xs={12} md={6}>
+          <Grid xs={12} md={6}>
             <Card css={{ w: "100%", h: "600px" }}>
               <Card.Body css={{ p: 0 }}>
                 <Card.Image
@@ -263,7 +254,7 @@ function WebService() {
                 );
               })}
             </Collapse.Group>
-          </Grid> */}
+          </Grid>
 
           {/* <Grid
             xs={12}
