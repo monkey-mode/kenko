@@ -6,6 +6,7 @@ import "../styles/globals.css";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const theme = createTheme({
@@ -13,10 +14,12 @@ function MyApp({ Component, pageProps }: AppProps) {
     theme: {
       colors: {
         primary: "#464E2E",
-        secondary: "#362706",
-        gold: "#FFD700",
+        secondary: "#302922",
+        primaryGold: "#E0AA3E",
+        secondaryGold: "#E1AB25",
+        warningLight: "$primaryGold",
         gold1: "#F9F295",
-        gold2: "#E0AA3E",
+        gold2: "#d6a657",
         gold3: "#E0AA3E",
         gold4: "#B88A44",
         gradient: "linear-gradient(to right, #BF953F,  #FCF6BA,  #AA771C)",
@@ -27,7 +30,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%)`,
       },
       fonts: {
-        sans: `'Nunito','Noto Sans Thai', sans-serif;`,
+        sans: `'Baskervville','Noto Sans Thai', sans-serif;`,
         primary: `'Baskervville', serif;`,
         secondary: `'Nunito', sans-serif;`,
       },

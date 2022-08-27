@@ -6,7 +6,13 @@ function PageLogo() {
     <Card isPressable variant={"flat"} css={{ background: "transparent" }}>
       <Card.Body css={{ p: "0" }}>
         <div style={{ display: "flex" }}>
-          <Logo fill={"#ffffff"} height={"60px"} width={"60px"} />
+          <Logo
+            fill={"#ffffff"}
+            height={"60px"}
+            width={"60px"}
+            withBg={false}
+            bg={""}
+          />
 
           <div
             style={{
@@ -20,7 +26,7 @@ function PageLogo() {
               h4
               weight={"normal"}
               css={{
-                textGradient: "$gradient",
+                textGradient: "to right, #BF953F,  #FCF6BA,  #AA771C",
                 fontFamily: "$primary",
                 letterSpacing: "0.5rem",
               }}
@@ -31,7 +37,7 @@ function PageLogo() {
               weight={"light"}
               size={"0.8rem"}
               css={{
-                textGradient: "$gradient",
+                textGradient: "to right, #BF953F,  #FCF6BA,  #AA771C",
                 fontFamily: "$secondary",
                 letterSpacing: "0.2rem",
               }}

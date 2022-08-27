@@ -2,8 +2,9 @@ function Divider() {
   return (
     <div
       style={{
-        opacity: "10%",
-        width: "80%",
+        background: "#302922",
+        opacity: "100%",
+        width: "100%",
         borderTop: "2px solid #ffffff",
         borderRadius: "1px",
       }}

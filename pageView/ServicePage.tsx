@@ -1,5 +1,5 @@
 import { Container, Grid } from "@nextui-org/react";
-import { Autoplay, EffectCoverflow } from "swiper";
+import { Autoplay, EffectCoverflow, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 import { ServiceCard } from "../components/ServiceCard";
@@ -16,7 +16,7 @@ function Service() {
       alignContent="center"
       alignItems="center"
       css={{
-        background: "#3A2503",
+        background: "$secondary",
         display: "flex",
         p: "$0",
       }}
@@ -41,16 +41,12 @@ function Service() {
               modifier: 1,
               slideShadows: true,
             }}
-            modules={[Autoplay, EffectCoverflow]}
+            modules={[Autoplay, EffectCoverflow, Navigation]}
             className="mySwiper"
           >
             {servicesList.map((service, index) => (
               <SwiperSlide key={index}>
-                <ServiceCard
-                  image={service.image}
-                  serviceName={service.name}
-                  subService={service.subService}
-                />
+                <ServiceCard image={service.image} serviceName={service.name} />
               </SwiperSlide>
             ))}
           </Swiper>

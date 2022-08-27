@@ -5,10 +5,9 @@ import { SubServiceType } from "../types";
 type Props = {
   image: string;
   serviceName: string;
-  subService: SubServiceType[];
 };
 
-export const ServiceCard = ({ image, serviceName, subService }: Props) => (
+export const ServiceCard = ({ image, serviceName }: Props) => (
   <Card css={{ w: "100%", h: "100%" }}>
     <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
       <Col>
@@ -29,33 +28,16 @@ export const ServiceCard = ({ image, serviceName, subService }: Props) => (
         alt="Relaxing app background"
       />
     </Card.Body>
-    <Card.Footer
-      className="serviceCard"
+    {/* <Card.Footer
       isBlurred
       css={{
-        height: "100%",
         position: "absolute",
         bgBlur: "#0f111466",
         bottom: 0,
         zIndex: 1,
       }}
     >
-      <Grid.Container gap={3}>
-        {subService.map((service, index) => {
-          return (
-            <Grid key={index}>
-              <Link color={"text"} block href="#" css={{ p: "$0" }}>
-                <Text color="#d1d1d1" size={15}>
-                  {service.th}/
-                </Text>
-                <Text color="#d1d1d1" size={15}>
-                  {service.en}
-                </Text>
-              </Link>
-            </Grid>
-          );
-        })}
-      </Grid.Container>
-    </Card.Footer>
+
+    </Card.Footer> */}
   </Card>
 );

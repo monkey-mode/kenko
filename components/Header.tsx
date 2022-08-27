@@ -14,11 +14,8 @@ function Headers() {
     });
   }, []);
 
-  const getBackGround = () => {
-    return scroll > 80 ? "saturate(180%) blur(10px)" : "";
-  };
   return (
-    <Navbar shouldHideOnScroll variant="sticky" maxWidth={"fluid"}>
+    <Navbar shouldHideOnScroll variant="sticky" >
       <Navbar.Brand hideIn="xs">
         <PageLogo />
       </Navbar.Brand>

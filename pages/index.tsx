@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import LandingPage from "../pageView/LandingPage";
 import MassagePage from "../pageView/MassagePage";
 import Service from "../pageView/ServicePage";
+import WebService from "../pageView/WebService";
 
 const Home: NextPage = () => {
   return (
@@ -16,11 +17,10 @@ const Home: NextPage = () => {
       }}
     >
       <LandingPage />
-      <Divider />
       <Service />
-      <Divider />
-      <MassagePage />
-      <Divider />
+      {/* <MassagePage />
+      <Divider /> */}
+      <WebService />
       <Footer />
     </div>
   );

@@ -1,12 +1,13 @@
 export type ServiceType = {
   name: string;
   image: string;
-  subService: SubServiceType[];
 };
 
 export type SubServiceType = {
   en: string;
   th: string;
+  desc?: string;
+  icon?: string;
   img: string;
   price: PriceType[];
 };
