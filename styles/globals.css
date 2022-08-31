@@ -68,3 +68,13 @@ Not supports in Firefox and IE */
 .serviceCard:hover{
   opacity: 1;
 }
+
+.contract:hover{
+  color: #E0AA3E;
+  cursor: pointer;
+}
+
+.menuheader:hover{
+  color: #E0AA3E;
+  cursor: pointer;
+}

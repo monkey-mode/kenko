@@ -6,6 +6,11 @@ import { ServiceCard } from "../components/ServiceCard";
 
 import { servicesList } from "../consts";
 
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
 function Service() {
   const isLg = useMediaQuery(1280);
   return (

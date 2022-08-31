@@ -291,11 +291,11 @@ function WebService() {
                     }}
                     title={
                       <Row
-                        // css={{
-                        //   background: waxHl == index ? "black" : "transparent",
-                        //   borderRadius: "$xl",
-                        //   px: "$10",
-                        // }}
+                        css={{
+                          background: waxHl == index ? "black" : "transparent",
+                          borderRadius: "$xl",
+                          px: "$10",
+                        }}
                         justify="space-between"
                       >
                         <Text

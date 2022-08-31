@@ -58,14 +58,16 @@ export const massageService: SubServiceType[] = [
       { period: "120 MINS", price: "1,000 THB" },
     ],
   },
+];
+export const massageService2: SubServiceType[] = [
   {
     en: "Foot massage",
     th: "นวดเท้า",
     img: "/massage-menu/foot-massage.jpg",
     desc: `A foot massage involves working on the feet with pressure, 
-    either manually or with mechanical aids to promote relaxation and health. 
-    A professional foot massage from a spa can be a treat, 
-    but a do-it-yourself self-massage or simply a rubdown of your feet can also ease pain and help you relax.`,
+  either manually or with mechanical aids to promote relaxation and health. 
+  A professional foot massage from a spa can be a treat, 
+  but a do-it-yourself self-massage or simply a rubdown of your feet can also ease pain and help you relax.`,
     price: [
       { period: "60 MINS", price: "300 THB" },
       { period: "90 MINS", price: "400 THB" },
@@ -77,9 +79,9 @@ export const massageService: SubServiceType[] = [
     th: "นวดประคบสมุนไพร",
     img: "/massage-menu/herbal-compress-massage.jpg",
     desc: `Herbal compress massage, which originated in Thailand, 
-    is the type of alternative therapy treatment which is applied on your soft tissues such as muscles and fascia to help you to relieve the stress, 
-    improve your sleep, improve general well-being, promotes blood circulation, 
-    stimulate the lymphatic system which helps to remove the waste products from your body and manage pain including non-specific lower back pain and neck and shoulder pains and aches.`,
+  is the type of alternative therapy treatment which is applied on your soft tissues such as muscles and fascia to help you to relieve the stress, 
+  improve your sleep, improve general well-being, promotes blood circulation, 
+  stimulate the lymphatic system which helps to remove the waste products from your body and manage pain including non-specific lower back pain and neck and shoulder pains and aches.`,
     price: [
       { period: "90 MINS", price: "1,000 THB" },
       { period: "120 MINS", price: "1,300 THB" },
@@ -90,7 +92,7 @@ export const massageService: SubServiceType[] = [
     th: "นวดหินร้อน",
     img: "/massage-menu/hot-stone-massage.jpg",
     desc: `This type of massage involves the use and placement of basalt River rock on different points of the body. 
-    The rocks are heated before use and the massage therapist can then apply deeper pressure to areas of concern without causing any discomfort.`,
+  The rocks are heated before use and the massage therapist can then apply deeper pressure to areas of concern without causing any discomfort.`,
     price: [
       { period: "90 MINS", price: "1,200 THB" },
       { period: "120 MINS", price: "1,500 THB" },
@@ -135,7 +137,7 @@ export const waxService: SubServiceType[] = [
     en: "Back Waxing",
     th: "แว็กซ์แผ่นหลัง",
     icon: "https://img.icons8.com/ios-filled/45/ffffff/back-massage-area.png",
-    img: "/massage-menu/foot-massage.jpg",
+    img: "/wax-menu/back-wax.jpg",
     desc: "",
     price: [{ period: "", price: "1,200 THB" }],
   },
@@ -158,7 +160,7 @@ export const waxService: SubServiceType[] = [
   {
     en: "Face Waxing",
     th: "แว็กซ์ใบหน้า",
-    img: "/massage-menu/foot-massage.jpg",
+    img: "/wax-menu/face-wax.jpg",
     icon: "https://img.icons8.com/ios-filled/50/000000/facepalm.png",
     desc: "",
     price: [{ period: "", price: "1,200 THB" }],
@@ -172,3 +174,37 @@ export const waxService: SubServiceType[] = [
     price: [{ period: "", price: "400 THB" }],
   },
 ];
+
+export const bodyCareService: SubServiceType[] = [
+  {
+    en: "BODY SCRUB + MILK BATH + TREATMENT OIL/LOTION",
+    th: "ขัดผิว + แช่น้ำนม + บำรุงผิว ออย/โลชั่น",
+    img: "/bodycare-menu/body-scrub.jpg",
+    icon: "https://img.icons8.com/ios-glyphs/45/ffffff/underwear.png",
+    desc: "",
+    price: [{ period: "", price: "999 THB" }],
+  },
+  {
+    en: "BODY SCRUB + BODY WRAP + MILK BATH + TREATMENT OIL/LOTION",
+    th: "ขัดผิว + พอกตัว + แช่น้ำนม + บำรุงผิว ออย/โลชั่น",
+    img: "/bodycare-menu/milk-bath.jpg",
+    icon: "https://img.icons8.com/ios-glyphs/45/ffffff/underwear.png",
+    desc: "",
+    price: [{ period: "", price: "1,599 THB" }],
+  },
+  {
+    en: "HERBAL STEAM + BODY SCRUB + BODY WRAP + MILK BATH + TREATMENT OIL/LOTION",
+    th: "อบสมุนไพร + ขัดผิว + พอกตัว + แช่น้ำนม + บำรุงผิว ออย/โลชั่น",
+    img: "/bodycare-menu/treatment-oil.jpg",
+    icon: "https://img.icons8.com/ios-glyphs/45/ffffff/underwear.png",
+    desc: "",
+    price: [{ period: "", price: "1,999 THB" }],
+  },
+];
+
+export enum PathName {
+  Index = "",
+  Promotion = "/promotion",
+  Services = "/services",
+  Contracts = "/contracts",
+}

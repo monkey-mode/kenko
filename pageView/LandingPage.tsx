@@ -3,8 +3,10 @@ import { servicesList } from "../consts";
 import { ServiceType } from "../types";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import required modules
-import { Pagination, Navigation } from "swiper";
+import { Pagination, Navigation, EffectCoverflow, Autoplay } from "swiper";
 import { useMediaQuery } from "../hooks/useMediaQuery";
+import Service from "./ServicePage";
+import { ServiceCard } from "../components/ServiceCard";
 
 function LandingPage() {
   const isXs = useMediaQuery(650);
@@ -54,25 +56,34 @@ function LandingPage() {
               contentment is our inspiration`}
             </Text>
             <Swiper
-              pagination={{
-                type: "fraction",
+              effect={"coverflow"}
+              grabCursor={true}
+              centeredSlides={true}
+              loop={true}
+              slidesPerView={"auto"}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
               }}
-              navigation={true}
-              modules={[Pagination, Navigation]}
+              coverflowEffect={{
+                rotate: 20,
+                stretch: 0,
+                depth: 300,
+                modifier: 1,
+                slideShadows: true,
+              }}
+              modules={[Autoplay, EffectCoverflow, Navigation]}
               className="mySwiper"
             >
-              <SwiperSlide>
-                <div
-                  style={{
-                    background: "white",
-                    height: "100%",
-                    width: "100%",
-                    color: "black",
-                  }}
-                >
-                  Promo 1
-                </div>
-              </SwiperSlide>
+              {servicesList.map((service, index) => (
+                <SwiperSlide key={index}>
+                  <ServiceCard
+                    image={service.image}
+                    serviceName={service.name}
+                  />
+                </SwiperSlide>
+              ))}
             </Swiper>
           </Container>
         </Grid>

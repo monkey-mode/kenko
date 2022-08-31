@@ -7,7 +7,7 @@ type Props = {
 function MenuHeader({ text }: Props) {
   return (
     <Text
-      h4
+      h5
       transform="uppercase"
       weight={"extrabold"}
       css={{

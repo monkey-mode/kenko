@@ -6,6 +6,7 @@ import Document, {
   NextScript,
   DocumentContext,
 } from "next/document";
+import Script from "next/script";
 import { CssBaseline } from "@nextui-org/react";
 
 class MyDocument extends Document {
@@ -28,7 +29,7 @@ class MyDocument extends Document {
             crossOrigin="true"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Baskervville&family=Noto+Sans+Thai:wght@100;200;300;400;500;600;700;800&family=Nunito:wght@200;300;400;500;600;700;800&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Noto+Sans+Thai:wght@100;200;300;400;500;600;700;800&family=Nunito:wght@200;300;400;500;600;700;800&display=swap"
             rel="stylesheet"
           />
           <link
