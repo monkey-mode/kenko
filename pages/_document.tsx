@@ -1,13 +1,12 @@
-import React from "react";
+import { CssBaseline } from "@nextui-org/react";
 import Document, {
-  Html,
+  DocumentContext,
   Head,
+  Html,
   Main,
   NextScript,
-  DocumentContext,
 } from "next/document";
-import Script from "next/script";
-import { CssBaseline } from "@nextui-org/react";
+import React from "react";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -22,6 +21,9 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          {/* eslint-disable-next-line @next/next/no-title-in-document-head*/}
+          <title>Kenko Beauty & Massages</title>
+          <link rel="shortcut icon" href="/logoicon.svg" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
