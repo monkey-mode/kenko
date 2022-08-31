@@ -15,18 +15,19 @@ function Service() {
   const isLg = useMediaQuery(1280);
   return (
     <Container
-      fluid
       direction="column"
       justify="center"
       alignContent="center"
       alignItems="center"
       css={{
+        maxW: "100%",
         background: "$secondary",
         display: "flex",
         p: "$0",
+        m: "$0",
       }}
     >
-      <Grid.Container md justify="center" gap={4}>
+      <Grid.Container justify="center" gap={4}>
         <Grid xs={12}>
           <Swiper
             effect={"coverflow"}

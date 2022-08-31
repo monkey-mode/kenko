@@ -1,6 +1,5 @@
-import { Navbar } from "@nextui-org/react";
+import { Navbar,Link } from "@nextui-org/react";
 
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { PathName } from "../consts";
@@ -62,22 +61,22 @@ function Headers() {
       </Navbar.Content>
       <Navbar.Collapse>
         <Navbar.CollapseItem>
-          <Link color="inherit" href={PathName.Index}>
+          <Link color="text" href={PathName.Index}>
             Home
           </Link>
         </Navbar.CollapseItem>
         <Navbar.CollapseItem>
-          <Link color="inherit" href={PathName.Promotion}>
+          <Link color="text" href={PathName.Promotion}>
             Promotion
           </Link>
         </Navbar.CollapseItem>
         <Navbar.CollapseItem>
-          <Link color="inherit" href={PathName.Services}>
+          <Link color="text" href={PathName.Services}>
             Services
           </Link>
         </Navbar.CollapseItem>
         <Navbar.CollapseItem>
-          <Link color="inherit" href={PathName.Contracts}>
+          <Link color="text" href={PathName.Contracts}>
             Contracts
           </Link>
         </Navbar.CollapseItem>

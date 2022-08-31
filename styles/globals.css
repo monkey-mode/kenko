@@ -78,3 +78,9 @@ Not supports in Firefox and IE */
   color: #E0AA3E;
   cursor: pointer;
 }
+
+.servicepage{
+  padding: 0px;
+  margin: 0px;
+  max-width: 100%;
+}
