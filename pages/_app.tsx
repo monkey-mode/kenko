@@ -1,6 +1,5 @@
-import { Container, NextUIProvider, createTheme } from "@nextui-org/react";
+import { createTheme, NextUIProvider } from "@nextui-org/react";
 import type { AppProps } from "next/app";
-import { useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import "../styles/globals.css";
@@ -10,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     type: "dark",
     theme: {
       colors: {
-        primary: "#336633",
+        primary: "#464E2E",
         secondary: "#302922",
         primaryGold: "#E0AA3E",
         secondaryGold: "#f2d274",

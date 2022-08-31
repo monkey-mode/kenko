@@ -1,15 +1,15 @@
 import { Container, Grid } from "@nextui-org/react";
 import { Autoplay, EffectCoverflow, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useMediaQuery } from "../hooks/useMediaQuery";
 import { ServiceCard } from "../components/ServiceCard";
+import { useMediaQuery } from "../hooks/useMediaQuery";
 
 import { servicesList } from "../consts";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 function Service() {
   const isLg = useMediaQuery(1280);
@@ -51,7 +51,11 @@ function Service() {
           >
             {servicesList.map((service, index) => (
               <SwiperSlide key={index}>
-                <ServiceCard image={service.image} serviceName={service.name} />
+                <ServiceCard
+                  image={service.image}
+                  serviceName={service.name}
+                  des={"Our service"}
+                />
               </SwiperSlide>
             ))}
           </Swiper>

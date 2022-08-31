@@ -1,23 +1,17 @@
-import {
-  Card,
-  Collapse,
-  Container,
-  Grid,
-  Row,
-  Text,
-  Image,
-} from "@nextui-org/react";
+import { faSpa } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Card, Collapse, Container, Grid, Row, Text } from "@nextui-org/react";
 import type { NextPage } from "next";
 import { useState } from "react";
 import MenuHeader from "../components/MenuHeader";
 import {
   bodyCareService,
+  facialService,
   massageService,
   massageService2,
+  parafinService,
   waxService,
 } from "../consts";
-import { faSpa, faCaretDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Services: NextPage = () => {
   const [mssageImg, setMassageImg] = useState<string>(massageService[0].img);
@@ -27,6 +21,8 @@ const Services: NextPage = () => {
 
   const [waxHl, setWaxHl] = useState<number>(0);
   const [bodyHl, setBodyHl] = useState<number>(0);
+  const [parafinHl, setParafinHl] = useState<number>(0);
+  const [facialHl, setFacialHl] = useState<number>(0);
 
   return (
     <Container
@@ -41,6 +37,16 @@ const Services: NextPage = () => {
         padding: 0,
       }}
     >
+      <Text
+        h1
+        weight="bold"
+        css={{
+          textGradient: "$gradient",
+          fontFamily: "$primary",
+        }}
+      >
+        Our Services
+      </Text>
       <Grid.Container gap={2}>
         <Grid xs={12} sm={6} justify={"flex-end"}>
           <Card css={{ w: "100%", h: "100%" }}>
@@ -418,20 +424,17 @@ const Services: NextPage = () => {
               );
             })}
           </Collapse.Group>
-          {/* <MenuHeader text="parafin menu" />
+          <MenuHeader text="parafin menu" />
           <Collapse.Group>
-            {bodyCareService.map((service, index) => {
+            {parafinService.map((service, index) => {
               return (
                 <Collapse
-                  // contentLeft={
-                  //   <Image src={service.icon ?? ""} alt={service.en} />
-                  // }
                   expanded={index == 0 ? true : false}
                   showArrow={false}
                   key={index}
                   onChange={(e, index, value) => {
                     if (index) {
-                      setBodyHl(index - 1);
+                      setParafinHl(index - 1);
                     }
                   }}
                   title={
@@ -439,9 +442,9 @@ const Services: NextPage = () => {
                       justify="space-between"
                       css={{
                         background:
-                          bodyHl == index ? "$secondary" : "transparent",
+                          parafinHl == index ? "$secondary" : "transparent",
                         borderRadius: "$xl",
-                        px: bodyHl == index ? "$10" : "$0",
+                        px: parafinHl == index ? "$10" : "$0",
                       }}
                     >
                       <Text
@@ -449,14 +452,14 @@ const Services: NextPage = () => {
                         transform="uppercase"
                         className="menuheader"
                         css={{
-                          color: `${bodyHl == index ? "$primaryGold" : ""}`,
+                          color: `${parafinHl == index ? "$primaryGold" : ""}`,
                         }}
                       >
                         {service.en}
                       </Text>
                       <FontAwesomeIcon
                         style={{
-                          color: `${bodyHl == index ? "#E0AA3E" : ""}`,
+                          color: `${parafinHl == index ? "#E0AA3E" : ""}`,
                           marginLeft: "1rem",
                         }}
                         icon={faSpa}
@@ -502,7 +505,95 @@ const Services: NextPage = () => {
                 </Collapse>
               );
             })}
-          </Collapse.Group> */}
+          </Collapse.Group>
+        </Grid>
+        <Grid xs={12} sm={6} direction={"column"}>
+          <MenuHeader text="facial treatment menu" />
+          <Collapse.Group>
+            {facialService.map((service, index) => {
+              return (
+                <Collapse
+                  // contentLeft={
+                  //   <Image src={service.icon ?? ""} alt={service.en} />
+                  // }
+                  expanded={index == 0 ? true : false}
+                  showArrow={false}
+                  key={index}
+                  onChange={(e, index, value) => {
+                    if (index) {
+                      setFacialHl(index - 1);
+                    }
+                  }}
+                  title={
+                    <Row
+                      justify="space-between"
+                      css={{
+                        background:
+                          facialHl == index ? "$secondary" : "transparent",
+                        borderRadius: "$xl",
+                        px: facialHl == index ? "$10" : "$0",
+                      }}
+                    >
+                      <Text
+                        h6
+                        transform="uppercase"
+                        className="menuheader"
+                        css={{
+                          color: `${facialHl == index ? "$primaryGold" : ""}`,
+                        }}
+                      >
+                        {service.en}
+                      </Text>
+                      <FontAwesomeIcon
+                        style={{
+                          color: `${facialHl == index ? "#E0AA3E" : ""}`,
+                          marginLeft: "1rem",
+                        }}
+                        icon={faSpa}
+                      />
+                    </Row>
+                  }
+                  subtitle={
+                    <Text small css={{ color: "$accents8" }}>
+                      {service.th}
+                    </Text>
+                  }
+                >
+                  <Card css={{ w: "100%", h: "300px" }} variant={"flat"}>
+                    <Card.Body css={{ p: 0 }}>
+                      <Card.Image
+                        src={service.img}
+                        objectFit="cover"
+                        width="100%"
+                        height="100%"
+                        alt="Relaxing app background"
+                      />
+                    </Card.Body>
+                    <Card.Footer
+                      css={{
+                        justifyContent: "flex-end",
+                        background: "$secondary",
+                      }}
+                    >
+                      <Text
+                        key={index}
+                        weight={"extrabold"}
+                        h6
+                        css={{
+                          letterSpacing: "1px",
+                          fontFamily: "$secondary",
+                          textGradient: "$gradient",
+                        }}
+                      >
+                        {service.price[0].period + " "}
+                        {service.price[0].price}
+                      </Text>
+                    </Card.Footer>
+                  </Card>
+                </Collapse>
+              );
+            })}
+          </Collapse.Group>
         </Grid>
       </Grid.Container>
     </Container>

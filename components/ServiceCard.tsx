@@ -1,18 +1,17 @@
-import { Card, Col, Row, Grid, Text, Link } from "@nextui-org/react";
-import { motion } from "framer-motion";
-import { SubServiceType } from "../types";
+import { Card, Col, Text } from "@nextui-org/react";
 
 type Props = {
   image: string;
-  serviceName: string;
+  serviceName?: string;
+  des?: string;
 };
 
-export const ServiceCard = ({ image, serviceName }: Props) => (
+export const ServiceCard = ({ image, serviceName, des }: Props) => (
   <Card css={{ w: "100%", h: "100%" }}>
     <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
       <Col>
         <Text size={12} weight="bold" transform="uppercase" color="#9E9E9E">
-          Our service
+          {des}
         </Text>
         <Text h3 color="white">
           {serviceName}
@@ -28,16 +27,5 @@ export const ServiceCard = ({ image, serviceName }: Props) => (
         alt="Relaxing app background"
       />
     </Card.Body>
-    {/* <Card.Footer
-      isBlurred
-      css={{
-        position: "absolute",
-        bgBlur: "#0f111466",
-        bottom: 0,
-        zIndex: 1,
-      }}
-    >
-
-    </Card.Footer> */}
   </Card>
 );

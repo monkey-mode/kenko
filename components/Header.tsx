@@ -1,10 +1,10 @@
-import { Button, Card, Container, Navbar, Row, Text } from "@nextui-org/react";
+import { Navbar } from "@nextui-org/react";
+
 import Link from "next/link";
-import PageLogo from "./PageLogo";
-import { useScroll } from "framer-motion";
-import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import { PathName } from "../consts";
+import PageLogo from "./PageLogo";
 
 function Headers() {
   const router = useRouter();
@@ -12,7 +12,7 @@ function Headers() {
 
   useEffect(() => {
     setCurrentPath(router.pathname);
-  }, []);
+  }, [router.pathname]);
 
   //#ffffff66", //isDark ? "#0f111466" : "#ffffff66",
   //saturate(180%) blur(10px)
@@ -26,22 +26,27 @@ function Headers() {
     >
       <Navbar.Brand>
         <PageLogo />
-        {/* <Text b color="inherit" hideIn="xs">
-          ACME
-        </Text> */}
       </Navbar.Brand>
       <Navbar.Content
         enableCursorHighlight="true"
         hideIn="xs"
-        variant="underline-rounded"
-        css={{ fontFamily: "$secondary", textTransform: "uppercase" }}
+        variant="highlight-solid-rounded"
+        css={{ fontFamily: "$secondary" }}
+        activeColor={"primary"}
       >
+        <Navbar.Link
+          href={PathName.Index}
+          isActive={currentPath == PathName.Index}
+        >
+          Home
+        </Navbar.Link>
         <Navbar.Link
           href={PathName.Promotion}
           isActive={currentPath == PathName.Promotion}
         >
           Promotion
         </Navbar.Link>
+
         <Navbar.Link
           href={PathName.Services}
           isActive={currentPath == PathName.Services}
@@ -57,33 +62,25 @@ function Headers() {
       </Navbar.Content>
       <Navbar.Collapse>
         <Navbar.CollapseItem>
-          <Link color="inherit" href="#">
-            aaaaa
+          <Link color="inherit" href={PathName.Index}>
+            Home
           </Link>
         </Navbar.CollapseItem>
         <Navbar.CollapseItem>
-          <Link color="inherit" href="#">
-            aaaaa
+          <Link color="inherit" href={PathName.Promotion}>
+            Promotion
           </Link>
         </Navbar.CollapseItem>
         <Navbar.CollapseItem>
-          <Link color="inherit" href="#">
-            aaaaa
+          <Link color="inherit" href={PathName.Services}>
+            Services
           </Link>
         </Navbar.CollapseItem>
-        {/* {collapseItems.map((item, index) => (
-          <Navbar.CollapseItem key={item}>
-            <Link
-              color="inherit"
-              css={{
-                minWidth: "100%",
-              }}
-              href="#"
-            >
-              {item}
-            </Link>
-          </Navbar.CollapseItem>
-        ))} */}
+        <Navbar.CollapseItem>
+          <Link color="inherit" href={PathName.Contracts}>
+            Contracts
+          </Link>
+        </Navbar.CollapseItem>
       </Navbar.Collapse>
       <Navbar.Content enableCursorHighlight showIn="xs" variant="underline">
         <Navbar.Toggle aria-label="toggle navigation" />

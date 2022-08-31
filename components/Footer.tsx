@@ -1,8 +1,7 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Container, Divider, Grid, Row, Text } from "@nextui-org/react";
+import { faLine, faSquareFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
-import {} from "@fortawesome/free-regular-svg-icons";
-import { faSquareFacebook, faLine } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Container, Grid, Text } from "@nextui-org/react";
 import Link from "next/link";
 import PageLogo from "./PageLogo";
 

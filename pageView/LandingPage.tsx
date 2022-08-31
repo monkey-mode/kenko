@@ -1,15 +1,12 @@
-import { Checkbox, Container, Grid, Image, Row, Text } from "@nextui-org/react";
-import { servicesList } from "../consts";
-import { ServiceType } from "../types";
+import { Container, Grid, Image, Row, Text } from "@nextui-org/react";
+import { Autoplay, EffectCoverflow, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-// import required modules
-import { Pagination, Navigation, EffectCoverflow, Autoplay } from "swiper";
-import { useMediaQuery } from "../hooks/useMediaQuery";
-import Service from "./ServicePage";
 import { ServiceCard } from "../components/ServiceCard";
+import { landingList } from "../consts";
+import { useMediaQuery } from "../hooks/useMediaQuery";
+import { ServiceType } from "../types";
 
 function LandingPage() {
-  const isXs = useMediaQuery(650);
   return (
     <Container
       fluid
@@ -38,12 +35,14 @@ function LandingPage() {
                 fontFamily: "$primary",
               }}
             >
-              Our Promotion
+              About us
             </Text>
             <Text
               weight="normal"
+              blockquote
               css={{
-                fontFamily: "$secondary",
+                fontFamily: "$primary",
+                background: "$secondary",
               }}
             >
               {`Happiness is the goal for everyone. To have a wonderful life, it
@@ -76,12 +75,9 @@ function LandingPage() {
               modules={[Autoplay, EffectCoverflow, Navigation]}
               className="mySwiper"
             >
-              {servicesList.map((service, index) => (
+              {landingList.map((service, index) => (
                 <SwiperSlide key={index}>
-                  <ServiceCard
-                    image={service.image}
-                    serviceName={service.name}
-                  />
+                  <ServiceCard image={service.image} />
                 </SwiperSlide>
               ))}
             </Swiper>

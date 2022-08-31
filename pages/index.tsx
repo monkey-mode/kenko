@@ -1,10 +1,6 @@
 import type { NextPage } from "next";
-import Divider from "../components/Divider";
-import Footer from "../components/Footer";
 import LandingPage from "../pageView/LandingPage";
-import MassagePage from "../pageView/MassagePage";
 import Service from "../pageView/ServicePage";
-import WebService from "../pageView/WebService";
 
 const Home: NextPage = () => {
   return (
@@ -18,10 +14,6 @@ const Home: NextPage = () => {
     >
       <LandingPage />
       <Service />
-      {/* <MassagePage />
-      <Divider /> */}
-      <WebService />
-      <Footer />
     </div>
   );
 };

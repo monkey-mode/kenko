@@ -20,6 +20,21 @@ export const servicesList: ServiceType[] = [
   },
 ];
 
+export const landingList: ServiceType[] = [
+  {
+    name: "",
+    image: "/landing/landing1.jpg",
+  },
+  {
+    name: "",
+    image: "/landing/landing2.jpg",
+  },
+  {
+    name: "",
+    image: "/landing/landing3.jpg",
+  },
+];
+
 export const massageService: SubServiceType[] = [
   {
     en: "Thai balm Massage",
@@ -180,7 +195,6 @@ export const bodyCareService: SubServiceType[] = [
     en: "BODY SCRUB + MILK BATH + TREATMENT OIL/LOTION",
     th: "ขัดผิว + แช่น้ำนม + บำรุงผิว ออย/โลชั่น",
     img: "/bodycare-menu/body-scrub.jpg",
-    icon: "https://img.icons8.com/ios-glyphs/45/ffffff/underwear.png",
     desc: "",
     price: [{ period: "", price: "999 THB" }],
   },
@@ -188,7 +202,6 @@ export const bodyCareService: SubServiceType[] = [
     en: "BODY SCRUB + BODY WRAP + MILK BATH + TREATMENT OIL/LOTION",
     th: "ขัดผิว + พอกตัว + แช่น้ำนม + บำรุงผิว ออย/โลชั่น",
     img: "/bodycare-menu/milk-bath.jpg",
-    icon: "https://img.icons8.com/ios-glyphs/45/ffffff/underwear.png",
     desc: "",
     price: [{ period: "", price: "1,599 THB" }],
   },
@@ -196,14 +209,89 @@ export const bodyCareService: SubServiceType[] = [
     en: "HERBAL STEAM + BODY SCRUB + BODY WRAP + MILK BATH + TREATMENT OIL/LOTION",
     th: "อบสมุนไพร + ขัดผิว + พอกตัว + แช่น้ำนม + บำรุงผิว ออย/โลชั่น",
     img: "/bodycare-menu/treatment-oil.jpg",
-    icon: "https://img.icons8.com/ios-glyphs/45/ffffff/underwear.png",
     desc: "",
     price: [{ period: "", price: "1,999 THB" }],
   },
 ];
 
+export const parafinService: SubServiceType[] = [
+  {
+    en: "HAND SCRUB + MASSAGE + PARAFIN",
+    th: "มือ ขัด + นวด + พาราฟิน",
+    img: "/parafin-menu/hand.jpg",
+    desc: "",
+    price: [{ period: "", price: "999 THB" }],
+  },
+  {
+    en: "FOOT SCRUB + MASSAGE + PARAFIN",
+    th: "เท้า ขัด + นวด + พาราฟิน",
+    img: "/parafin-menu/foot.jpg",
+    desc: "",
+    price: [{ period: "", price: "1,599 THB" }],
+  },
+  {
+    en: "FOOT/HAND SCRUB + MASSAGE + PARAFIN",
+    th: "มือ/เท้า ขัด + นวด + พาราฟิน",
+    img: "/parafin-menu/hand-foot.jpg",
+    desc: "",
+    price: [{ period: "", price: "1,999 THB" }],
+  },
+];
+
+export const facialService: SubServiceType[] = [
+  {
+    en: "FACE SCRUB + FACE MASK",
+    th: "ขัดหน้า + มาส์กหน้า",
+    img: "/facial-menu/face-scrub.jpg",
+    desc: "",
+    price: [{ period: "", price: "999 THB" }],
+  },
+  {
+    en: "FACE SCRUB + FACE EXERCISE",
+    th: "ขัดหน้า + นวดหน้าเรียวยกกระชัย",
+    img: "/facial-menu/face-exercise.jpg",
+    desc: "",
+    price: [{ period: "", price: "1,999 THB" }],
+  },
+  {
+    en: "FACE SCRUB + FACE EXERCISE + FACE MASK",
+    th: "ขัดหน้า +นวดหน้าเรียวยกกระชัย + มาส์กหน้า",
+    img: "/facial-menu/face-treatment.jpg",
+    desc: "",
+    price: [{ period: "", price: "2,500 THB" }],
+  },
+  {
+    en: "FACE SCRUB + FACE EXERCISE + FACE MASK",
+    th: "ขัดหน้า +นวดหน้าเรียวยกกระชัย + มาส์กหน้า",
+    img: "/facial-menu/face-treatment.jpg",
+    desc: "",
+    price: [{ period: "", price: "2,500 THB" }],
+  },
+  {
+    en: "IONTO",
+    th: "",
+    img: "/facial-menu/face-treatment.jpg",
+    desc: "",
+    price: [{ period: "20 MINS", price: "399 THB" }],
+  },
+  {
+    en: "CRYO COOLING",
+    th: "",
+    img: "/facial-menu/face-treatment.jpg",
+    desc: "",
+    price: [{ period: "20 MINS", price: "399 THB" }],
+  },
+  {
+    en: "OMEGA LIGHT",
+    th: "",
+    img: "/facial-menu/face-treatment.jpg",
+    desc: "",
+    price: [{ period: "15-20 MINS", price: "399 THB" }],
+  },
+];
+
 export enum PathName {
-  Index = "",
+  Index = "/",
   Promotion = "/promotion",
   Services = "/services",
   Contracts = "/contracts",
