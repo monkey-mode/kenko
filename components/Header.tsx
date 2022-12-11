@@ -39,12 +39,12 @@ function Headers() {
         >
           Home
         </Navbar.Link>
-        <Navbar.Link
+        {/* <Navbar.Link
           href={PathName.Promotion}
           isActive={currentPath == PathName.Promotion}
         >
           Promotion
-        </Navbar.Link>
+        </Navbar.Link> */}
 
         <Navbar.Link
           href={PathName.Services}

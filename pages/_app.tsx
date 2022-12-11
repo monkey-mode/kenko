@@ -1,7 +1,13 @@
 import { createTheme, NextUIProvider } from "@nextui-org/react";
 import type { AppProps } from "next/app";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+import dynamic from "next/dynamic";
+
+const Header = dynamic(() => import("../components/Header"), {
+  ssr: false,
+});
+const Footer = dynamic(() => import("../components/Footer"), {
+  ssr: false,
+});
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
