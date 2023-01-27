@@ -55,17 +55,17 @@ export const massageService: SubServiceType[] = [
     img: "/massage-menu/aromatherapy-massage.jpg",
     desc: "Aromatherapy centers around holistic medicine that utilizes extracts from natural plants for health and wellbeing. Many massage therapists apply aromatic essential oils medicinally combined with their massage techniques to improve their client’s physical and emotional health.",
     price: [
-      { period: "60 MINS", price: "600 THB" },
-      { period: "90 MINS", price: "800 THB" },
-      { period: "120 MINS", price: "1,000 THB" },
+      { period: "60 MINS", price: "650 THB" },
+      { period: "90 MINS", price: "850 THB" },
+      { period: "120 MINS", price: "1,150 THB" },
     ],
   },
   {
     en: "Aloe vera masage",
     th: "นวดเจลว่านหางจรเข้",
     img: "/massage-menu/aloe-vera-masage.jpg",
-    desc: `Aloe Vera massage is a type of massage that uses Aloe Vera gel. 
-    One of the most common uses of Aloe Vera massage is to treat a sunburn or any other skin irritations. 
+    desc: `Aloe Vera massage is a type of massage that uses Aloe Vera gel.
+    One of the most common uses of Aloe Vera massage is to treat a sunburn or any other skin irritations.
     Aloe Vera gel has numerous benefits for your skin and can help heal a cut or a rash on the skin.`,
     price: [
       { period: "60 MINS", price: "600 THB" },
@@ -79,23 +79,24 @@ export const massageService2: SubServiceType[] = [
     en: "Foot massage",
     th: "นวดเท้า",
     img: "/massage-menu/foot-massage.jpg",
-    desc: `A foot massage involves working on the feet with pressure, 
-  either manually or with mechanical aids to promote relaxation and health. 
-  A professional foot massage from a spa can be a treat, 
+    desc: `A foot massage involves working on the feet with pressure,
+  either manually or with mechanical aids to promote relaxation and health.
+  A professional foot massage from a spa can be a treat,
   but a do-it-yourself self-massage or simply a rubdown of your feet can also ease pain and help you relax.`,
     price: [
+      { period: "30 MINS", price: "199 THB" },
       { period: "60 MINS", price: "300 THB" },
-      { period: "90 MINS", price: "400 THB" },
-      { period: "120 MINS", price: "500 THB" },
+      { period: "90 MINS", price: "450 THB" },
+      { period: "120 MINS", price: "550 THB" },
     ],
   },
   {
     en: "Herbal compress massage",
     th: "นวดประคบสมุนไพร",
     img: "/massage-menu/herbal-compress-massage.jpg",
-    desc: `Herbal compress massage, which originated in Thailand, 
-  is the type of alternative therapy treatment which is applied on your soft tissues such as muscles and fascia to help you to relieve the stress, 
-  improve your sleep, improve general well-being, promotes blood circulation, 
+    desc: `Herbal compress massage, which originated in Thailand,
+  is the type of alternative therapy treatment which is applied on your soft tissues such as muscles and fascia to help you to relieve the stress,
+  improve your sleep, improve general well-being, promotes blood circulation,
   stimulate the lymphatic system which helps to remove the waste products from your body and manage pain including non-specific lower back pain and neck and shoulder pains and aches.`,
     price: [
       { period: "90 MINS", price: "1,000 THB" },
@@ -106,10 +107,10 @@ export const massageService2: SubServiceType[] = [
     en: "Hot stone massage",
     th: "นวดหินร้อน",
     img: "/massage-menu/hot-stone-massage.jpg",
-    desc: `This type of massage involves the use and placement of basalt River rock on different points of the body. 
+    desc: `This type of massage involves the use and placement of basalt River rock on different points of the body.
   The rocks are heated before use and the massage therapist can then apply deeper pressure to areas of concern without causing any discomfort.`,
     price: [
-      { period: "90 MINS", price: "1,200 THB" },
+      { period: "90 MINS", price: "1,250 THB" },
       { period: "120 MINS", price: "1,500 THB" },
     ],
   },
