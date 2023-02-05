@@ -199,20 +199,20 @@ export const bodyCareService: SubServiceType[] = [
     desc: "",
     price: [{ period: "", price: "999 THB" }],
   },
-  {
-    en: "BODY SCRUB + BODY WRAP + MILK BATH + TREATMENT OIL/LOTION",
-    th: "ขัดผิว + พอกตัว + แช่น้ำนม + บำรุงผิว ออย/โลชั่น",
-    img: "/bodycare-menu/milk-bath.jpg",
-    desc: "",
-    price: [{ period: "", price: "1,599 THB" }],
-  },
-  {
-    en: "HERBAL STEAM + BODY SCRUB + BODY WRAP + MILK BATH + TREATMENT OIL/LOTION",
-    th: "อบสมุนไพร + ขัดผิว + พอกตัว + แช่น้ำนม + บำรุงผิว ออย/โลชั่น",
-    img: "/bodycare-menu/treatment-oil.jpg",
-    desc: "",
-    price: [{ period: "", price: "1,999 THB" }],
-  },
+  // {
+  //   en: "BODY SCRUB + BODY WRAP + MILK BATH + TREATMENT OIL/LOTION",
+  //   th: "ขัดผิว + พอกตัว + แช่น้ำนม + บำรุงผิว ออย/โลชั่น",
+  //   img: "/bodycare-menu/milk-bath.jpg",
+  //   desc: "",
+  //   price: [{ period: "", price: "1,599 THB" }],
+  // },
+  // {
+  //   en: "HERBAL STEAM + BODY SCRUB + BODY WRAP + MILK BATH + TREATMENT OIL/LOTION",
+  //   th: "อบสมุนไพร + ขัดผิว + พอกตัว + แช่น้ำนม + บำรุงผิว ออย/โลชั่น",
+  //   img: "/bodycare-menu/treatment-oil.jpg",
+  //   desc: "",
+  //   price: [{ period: "", price: "1,999 THB" }],
+  // },
 ];
 
 export const parafinService: SubServiceType[] = [

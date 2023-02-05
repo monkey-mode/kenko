@@ -225,7 +225,7 @@ const CollapseMenmu: NextPage = () => {
         </Card>
       </Grid>
       <Grid xs={12} sm={6} direction={'column'}>
-        <MenuHeader text="wax menu" />
+        <MenuHeader text="wax menu" description='For Booking Only'/>
         <Collapse.Group>
           {waxService.map((service, index) => {
             return (
@@ -405,8 +405,10 @@ const CollapseMenmu: NextPage = () => {
               </Collapse>
             )
           })}
+
         </Collapse.Group>
-        <MenuHeader text="parafin menu" />
+      {/*parafin menu*/}
+        {/* <MenuHeader text="parafin menu" />
         <Collapse.Group>
           {parafinService.map((service, index) => {
             return (
@@ -487,9 +489,10 @@ const CollapseMenmu: NextPage = () => {
               </Collapse>
             )
           })}
-        </Collapse.Group>
+        </Collapse.Group> */}
       </Grid>
-      <Grid xs={12} sm={6} direction={'column'}>
+      {/*facial treatment menu*/}
+      {/* <Grid xs={12} sm={6} direction={'column'}>
         <MenuHeader text="facial treatment menu" />
         <Collapse.Group>
           {facialService.map((service, index) => {
@@ -576,7 +579,7 @@ const CollapseMenmu: NextPage = () => {
             )
           })}
         </Collapse.Group>
-      </Grid>
+      </Grid> */}
     </Grid.Container>
   )
 }
