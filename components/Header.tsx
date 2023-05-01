@@ -65,11 +65,11 @@ function Headers() {
             Home
           </Link>
         </Navbar.CollapseItem>
-        <Navbar.CollapseItem>
+        {/* <Navbar.CollapseItem>
           <Link color="text" href={PathName.Promotion}>
             Promotion
           </Link>
-        </Navbar.CollapseItem>
+        </Navbar.CollapseItem> */}
         <Navbar.CollapseItem>
           <Link color="text" href={PathName.Services}>
             Services
